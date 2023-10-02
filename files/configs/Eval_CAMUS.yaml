@@ -1,0 +1,6 @@
+EVAL:
+  EXAMPLES_TO_PLOT: 10
+  WEIGHTS: 'experiments/logs/CAMUS_cv_1/GCN_multi_small/mobilenet2/trained/weights_CAMUS_cv_1_GCN_multi_small_best_loss.pth'
+  BATCH_SIZE: 1
+  DATASET: 'CAMUS_cv_1'
+  INPUT_SIZE: 256
