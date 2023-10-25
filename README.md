@@ -4,7 +4,8 @@
 
 ## Code of the architecture as a modular entity
 If you want to use the architecture in your own project, you can use the architecture as a modular entity as provided in 
-https://github.com/gillesvntnu/GCN_multistructure
+https://github.com/gillesvntnu/GraphBasedSegmentation.git
+
 
 ## Quickstart
 See [QUICKSTART.md/](./QUICKSTART.md) to get started with the default configuration.
