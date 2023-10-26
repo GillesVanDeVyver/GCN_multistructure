@@ -6,6 +6,9 @@
 If you want to use the architecture in your own project, you can use the architecture as a modular entity as provided in 
 https://github.com/gillesvntnu/GraphBasedSegmentation.git
 
+## Code of real-time demo
+For code of the real-time, c++ demo of inter model agreement, see 
+https://github.com/gillesvntnu/GCN_UNET_agreement_demo.git
 
 ## Quickstart
 See [QUICKSTART.md/](./QUICKSTART.md) to get started with the default configuration.
