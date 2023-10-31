@@ -66,11 +66,14 @@ The CAMUS dataset is available at https://www.creatis.insa-lyon.fr/Challenge/cam
 “Deep learning for segmentation using an open large-scale dataset in
 2d echocardiography,”
 
+Information on the CAMUS cross validation splits can be found in ``` files/listSubGroups ```.
+
+
 ## Environment
 See [INSTALL.md/](./INSTALL.md) for environment setup.
 
 ## Getting stated
-See [GETTING_STARTED.md](./GETTING_STARTED.md) to get started with training and testing the echographs model. 
+See [GETTING_STARTED.md](./GETTING_STARTED.md) to get started with training and testing the GCN model. 
 
 ## Contact
 For questions, please contact:

@@ -19,8 +19,10 @@
 3) Run ```PYTHONPATH=./ python tools/preprocess_CAMUS_displacement.py```
 
 ## Evaluation of trained model:
-1) Run ``` python eval.py --config_file files/configs/Eval_CAMUS_displacement.yaml ```
-2) The results will be saved in ``` experiments/logs/... ```
+1) Download the trained model from https://huggingface.co/gillesvdv/GCN_with_displacement_camus_cv1
+2) place the downloaded .pth file in ``` experiments/logs/CAMUS_displacement_cv_1/GCN_multi_displacement_small/mobilenet2/trained/ ```
+2) Run ``` python eval.py ```
+3) The results will be saved in ``` experiments/logs/... ```
 
 
 ## Training your own model:

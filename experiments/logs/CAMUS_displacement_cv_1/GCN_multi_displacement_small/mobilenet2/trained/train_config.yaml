@@ -1,0 +1,55 @@
+AUG:
+  METHOD: strongkeep
+  PROB: 0.9
+DATA:
+  PATH_TO_DATA_DIR: ''
+DATA_LOADER:
+  ENABLE_MULTI_THREAD_DECODE: false
+  NUM_WORKERS: 8
+  OVERFIT: false
+  PIN_MEMORY: true
+DISPLACEMENT_MODEL: true
+EVAL:
+  BATCH_SIZE: 1
+  DATASET: CAMUS_displacement_cv_1
+  EXAMPLES_TO_PLOT: 10
+  INPUT_SIZE: 256
+  MODE: normal
+  NUM_WORKERS: 8
+  OUT_DIR: null
+  OUT_DIR_UNET: null
+  SEG_DIR: seg_dir_to_be_specified
+  WEIGHTS: experiments/logs/CAMUS_displacement_cv_1/GCN_multi_displacement_small/mobilenet2/721154036/weights_CAMUS_displacement_cv_1_GCN_multi_displacement_small_best_kptsErr.pth
+INF:
+  INPUT: ''
+  MODE: folder_sequence
+  OUTPUT: ''
+  WEIGHTS: ''
+KPTS_EXTRACTOR_WEIGHTS: null
+MODEL:
+  BACKBONE: mobilenet2
+  LOSS_FUNC:
+  - L2_distances
+  NAME: GCN_multi_displacement_small
+  WEIGHTS: null
+NUM_FRAMES: 2
+SEED: 1234
+SOLVER:
+  BASE_LR: 1.0e-05
+  OPTIMIZER: Adam
+TRAIN:
+  BATCH_SIZE: 4
+  CHECKPOINT_FILE_PATH: ''
+  DATASET: CAMUS_displacement_cv_1
+  EPOCHS: 5000
+  EVAL_INTERVAL: 1
+  INPUT_SIZE: 256
+  LOAD_OPTIMIZER: false
+  NUM_KPTS: 107
+  NUM_KPTS_MULTISTRUCTURE:
+  - 43
+  - 21
+  - 43
+  OVERFIT: false
+  SAVE_INTERVAL: null
+  WEIGHTS: null

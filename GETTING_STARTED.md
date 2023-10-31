@@ -95,6 +95,15 @@ The default configuration for training used the config file ```files/configs/Tra
 for training and the config file ```files/configs/Eval_CAMUS_displacement.yaml``` for evaluation.
 It uses the GCN_multi_small model with the mobilenet2 backbone and the strongkeep augmentation bundle.
 
+## Pretrained models
+The default mode trained on the first split of the CAMUS dataset can be downloaded from
+https://huggingface.co/gillesvdv/GCN_with_displacement_camus_cv1. 
+place the .pth file in 
+``` experiments/logs/CAMUS_displacement_cv_1/GCN_multi_displacement_small/mobilenet2/trained/ ```
+Now you can run the default eval configuration to evaluate the model.
+
+Information on the CAMUS cross validation splits can be found in ``` files/listSubGroups ```.
+
 
 ## Monitor training 
 You can monitor your results using tensorboard. Depending on your model choice, the mean kpts (averaged over all keypoints), ef (regressed value) and sd (classified frame) error can be tracked for validation.

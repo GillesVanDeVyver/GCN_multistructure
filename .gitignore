@@ -140,7 +140,6 @@ test_cuda.py
 files/config_CAMUS_cv/
 /extra_plotting/
 
-/experiments/
 
 data/local_data/
 data/subgroups_CAMUS/
@@ -160,3 +159,8 @@ files/echonet_cycle_test_filenames.txt
 files/echonet_cycle_train_filenames.txt
 
 files/echonet_cycle_val_filenames.txt
+/experiments/logs/CAMUS_displacement_cv_1/GCN_multi_displacement_small/mobilenet2/trained/weights_CAMUS_displacement_cv_1_GCN_multi_displacement_small_best_loss_eval_on_CAMUS_displacement_cv_1/
+
+experiments/logs/CAMUS_displacement_cv_1/GCN_multi_displacement_small/mobilenet2/trained/events.out.tfevents.1689955916.cius-gpu-alrai.24910.0
+
+experiments/logs/CAMUS_displacement_cv_1/GCN_multi_displacement_small/mobilenet2/trained/weights_CAMUS_displacement_cv_1_GCN_multi_displacement_small_best_loss.pth
