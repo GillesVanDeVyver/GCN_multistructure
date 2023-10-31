@@ -1,0 +1,312 @@
+---------------------------------------
+---------------------------------------
+Sub group 1
+
+Training
+
+Image quality: Good => 35 %
+Image quality: Medium => 46 %
+Image quality: Poor => 19 %
+EF: >=55 => 20 %
+EF: <=45 => 49 %
+EF: else => 31 %
+
+Validation
+
+Image quality: Good => 34 %
+Image quality: Medium => 46 %
+Image quality: Poor => 20 %
+EF: >=55 => 18 %
+EF: <=45 => 50 %
+EF: else => 32 %
+
+Testing
+
+Image quality: Good => 34 %
+Image quality: Medium => 48 %
+Image quality: Poor => 18 %
+EF: >=55 => 20 %
+EF: <=45 => 48 %
+EF: else => 32 %
+
+---------------------------------------
+---------------------------------------
+Sub group 2
+
+Training
+
+Image quality: Good => 35 %
+Image quality: Medium => 46 %
+Image quality: Poor => 19 %
+EF: >=55 => 20 %
+EF: <=45 => 49 %
+EF: else => 31 %
+
+Validation
+
+Image quality: Good => 34 %
+Image quality: Medium => 46 %
+Image quality: Poor => 20 %
+EF: >=55 => 20 %
+EF: <=45 => 48 %
+EF: else => 32 %
+
+Testing
+
+Image quality: Good => 34 %
+Image quality: Medium => 46 %
+Image quality: Poor => 20 %
+EF: >=55 => 18 %
+EF: <=45 => 50 %
+EF: else => 32 %
+
+---------------------------------------
+---------------------------------------
+Sub group 3
+
+Training
+
+Image quality: Good => 35 %
+Image quality: Medium => 46 %
+Image quality: Poor => 19 %
+EF: >=55 => 19 %
+EF: <=45 => 49 %
+EF: else => 32 %
+
+Validation
+
+Image quality: Good => 34 %
+Image quality: Medium => 46 %
+Image quality: Poor => 20 %
+EF: >=55 => 20 %
+EF: <=45 => 50 %
+EF: else => 30 %
+
+Testing
+
+Image quality: Good => 34 %
+Image quality: Medium => 46 %
+Image quality: Poor => 20 %
+EF: >=55 => 20 %
+EF: <=45 => 48 %
+EF: else => 32 %
+
+---------------------------------------
+---------------------------------------
+Sub group 4
+
+Training
+
+Image quality: Good => 35 %
+Image quality: Medium => 46 %
+Image quality: Poor => 19 %
+EF: >=55 => 19 %
+EF: <=45 => 49 %
+EF: else => 32 %
+
+Validation
+
+Image quality: Good => 34 %
+Image quality: Medium => 46 %
+Image quality: Poor => 20 %
+EF: >=55 => 20 %
+EF: <=45 => 48 %
+EF: else => 32 %
+
+Testing
+
+Image quality: Good => 34 %
+Image quality: Medium => 46 %
+Image quality: Poor => 20 %
+EF: >=55 => 20 %
+EF: <=45 => 50 %
+EF: else => 30 %
+
+---------------------------------------
+---------------------------------------
+Sub group 5
+
+Training
+
+Image quality: Good => 35 %
+Image quality: Medium => 46 %
+Image quality: Poor => 19 %
+EF: >=55 => 19 %
+EF: <=45 => 49 %
+EF: else => 32 %
+
+Validation
+
+Image quality: Good => 36 %
+Image quality: Medium => 46 %
+Image quality: Poor => 18 %
+EF: >=55 => 20 %
+EF: <=45 => 50 %
+EF: else => 30 %
+
+Testing
+
+Image quality: Good => 34 %
+Image quality: Medium => 46 %
+Image quality: Poor => 20 %
+EF: >=55 => 20 %
+EF: <=45 => 48 %
+EF: else => 32 %
+
+---------------------------------------
+---------------------------------------
+Sub group 6
+
+Training
+
+Image quality: Good => 35 %
+Image quality: Medium => 46 %
+Image quality: Poor => 19 %
+EF: >=55 => 19 %
+EF: <=45 => 49 %
+EF: else => 32 %
+
+Validation
+
+Image quality: Good => 36 %
+Image quality: Medium => 46 %
+Image quality: Poor => 18 %
+EF: >=55 => 20 %
+EF: <=45 => 50 %
+EF: else => 30 %
+
+Testing
+
+Image quality: Good => 36 %
+Image quality: Medium => 46 %
+Image quality: Poor => 18 %
+EF: >=55 => 20 %
+EF: <=45 => 50 %
+EF: else => 30 %
+
+---------------------------------------
+---------------------------------------
+Sub group 7
+
+Training
+
+Image quality: Good => 35 %
+Image quality: Medium => 46 %
+Image quality: Poor => 19 %
+EF: >=55 => 20 %
+EF: <=45 => 49 %
+EF: else => 32 %
+
+Validation
+
+Image quality: Good => 36 %
+Image quality: Medium => 46 %
+Image quality: Poor => 18 %
+EF: >=55 => 18 %
+EF: <=45 => 50 %
+EF: else => 32 %
+
+Testing
+
+Image quality: Good => 36 %
+Image quality: Medium => 46 %
+Image quality: Poor => 18 %
+EF: >=55 => 20 %
+EF: <=45 => 50 %
+EF: else => 30 %
+
+---------------------------------------
+---------------------------------------
+Sub group 8
+
+Training
+
+Image quality: Good => 35 %
+Image quality: Medium => 46 %
+Image quality: Poor => 19 %
+EF: >=55 => 20 %
+EF: <=45 => 49 %
+EF: else => 31 %
+
+Validation
+
+Image quality: Good => 36 %
+Image quality: Medium => 46 %
+Image quality: Poor => 18 %
+EF: >=55 => 20 %
+EF: <=45 => 48 %
+EF: else => 32 %
+
+Testing
+
+Image quality: Good => 36 %
+Image quality: Medium => 46 %
+Image quality: Poor => 18 %
+EF: >=55 => 18 %
+EF: <=45 => 50 %
+EF: else => 32 %
+
+---------------------------------------
+---------------------------------------
+Sub group 9
+
+Training
+
+Image quality: Good => 35 %
+Image quality: Medium => 46 %
+Image quality: Poor => 19 %
+EF: >=55 => 20 %
+EF: <=45 => 49 %
+EF: else => 31 %
+
+Validation
+
+Image quality: Good => 36 %
+Image quality: Medium => 46 %
+Image quality: Poor => 18 %
+EF: >=55 => 18 %
+EF: <=45 => 50 %
+EF: else => 32 %
+
+Testing
+
+Image quality: Good => 36 %
+Image quality: Medium => 46 %
+Image quality: Poor => 18 %
+EF: >=55 => 20 %
+EF: <=45 => 48 %
+EF: else => 32 %
+
+---------------------------------------
+---------------------------------------
+Sub group 10
+
+Training
+
+Image quality: Good => 35 %
+Image quality: Medium => 46 %
+Image quality: Poor => 19 %
+EF: >=55 => 20 %
+EF: <=45 => 49 %
+EF: else => 31 %
+
+Validation
+
+Image quality: Good => 34 %
+Image quality: Medium => 48 %
+Image quality: Poor => 18 %
+EF: >=55 => 20 %
+EF: <=45 => 48 %
+EF: else => 32 %
+
+Testing
+
+Image quality: Good => 36 %
+Image quality: Medium => 46 %
+Image quality: Poor => 18 %
+EF: >=55 => 18 %
+EF: <=45 => 50 %
+EF: else => 32 %
+
+---------------------------------------
+---------------------------------------
