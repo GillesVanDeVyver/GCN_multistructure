@@ -4,7 +4,8 @@
 
 ## Code of the architecture as a modular entity
 If you want to use the architecture in your own project, you can use the architecture as a modular entity as provided in 
-https://github.com/gillesvntnu/GraphBasedSegmentation.git
+https://github.com/gillesvntnu/GraphBasedSegmentation.git. 
+The code in that repository contains the isolated code for the arhictecture only, so you can insert it in any PyTorch framework.
 
 ## Code of real-time demo
 For code of the real-time, c++ demo of inter model agreement, see 
