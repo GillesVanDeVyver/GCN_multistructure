@@ -4,12 +4,18 @@
 
 ## Code of the architecture as a modular entity
 If you want to use the architecture in your own project, you can use the architecture as a modular entity as provided in 
-https://github.com/gillesvntnu/GraphBasedSegmentation.git. 
-The code in that repository contains the isolated code for the arhictecture only, so you can insert it in any PyTorch framework.
+https://github.com/gillesvntnu/GraphBasedSegmentation.git. The code in that repository contains the isolated code for 
+the arhictecture only, so you can insert it in any PyTorch framework.
 
-## Code of real-time demo
+## Real-time demo
 For code of the real-time, c++ demo of inter model agreement, see 
 https://github.com/gillesvntnu/GCN_UNET_agreement_demo.git
+
+![](./figures/real_time_demo.gif)
+
+The GCN and nnU-Net segmentations are shown on the left
+and right side respectively. The color-coded status bar on top
+visualizes the agreement between the models.
 
 ## Quickstart
 See [QUICKSTART.md/](./QUICKSTART.md) to get started with the default configuration.
@@ -68,6 +74,21 @@ The CAMUS dataset is available at https://www.creatis.insa-lyon.fr/Challenge/cam
 2d echocardiography,”
 
 Information on the CAMUS cross validation splits can be found in ``` files/listSubGroups ```.
+
+## Architecture
+
+![plot](./figures/architecture.png)
+The architecture of the GCN. The CNN encoder transforms the input ultrasound image of width W and height
+H to an embedded vector of size X. A dense layer transforms this embedding to an embedding in keypoint space, with 107
+keypoints and C1 channels. The decoder consists of a sequence of graph convolutions over these keypoint embeddings. The
+final outputs are the 2D coordinates of the keypoints in the image.
+## Results
+
+![plot](./figures/case_analysis.png)
+
+Case analysis and comparison of the GCN with displacement method and nnU-Net on CAMUS. The cases are
+selected based on the overall Dice score between the annotation and the GCN or U-Net segmentations.
+
 
 
 ## Environment

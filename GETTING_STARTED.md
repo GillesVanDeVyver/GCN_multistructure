@@ -58,6 +58,19 @@ or the hyperparameter to fit your needs. You can select different models, differ
 We also integrated different augmentation bundles and achieved best results with the configuration 
 'strongkeep'. You can further select the probability of the applied augmentation.
 
+
+<img src="./figures/preprocessing.png" alt="preprocessing.png" style="width:400px;"/>
+
+Preprocessing to transform pixel labels to key-
+points positions. A and B are the base points of the LV. C and
+D are the base points of the MYO. E, F, and G are the apexes
+of the LV, MYO, and LA respectively.
+The algorithm first finds point A and B where the LV and LA meet.
+Then it finds points C and D by extending the line between A and B.
+Finally, it finds points E, F, and G as the most distant points from A and B.
+
+
+
 ## Overview different models
 All model configurations can be found in the file ```models.py```. 
 
@@ -72,6 +85,26 @@ of the epicardium (EP)
 - GCN_multi_small: 2 decoder layers
 - no_decoder: no decoder layers
 
+<img src="./figures/graph_convolution.png" alt="graph_convolution.png" style="width:300px;"/>
+
+Multi-structure convolution. q1..n are zero-padded epicardium keypoints,
+p1..n are endocardium and left atrium keypoints. 
+The highlighted points are used as input
+to update the embedding of the purple keypoint, with w the
+primary receptive field and v the secondary receptive field.
+
+
+<img src="./figures/double_ring_model.png" alt="double_ring_model.png" style="width:400px;"/>
+
+
+Example output of the double ring model. 
+The output of the model are the x and y coordinates of the keypoints.
+The keypoints are ordered in two concentric rings.
+The inner ring consists of the left ventricle (red) and left atrium (green), the outer ring consists
+of the epicardium (blue)
+
+
+
 
 ### Displacement models
 These methods predict the coordinates of each of the keypoints from the inner ring (LV+LA) and predicts
@@ -81,6 +114,14 @@ the displacement of the keypoints from the outer ring (EP) to the inner ring (LV
 - GCN_multi_displacement_medium: 4 decoder layers
 - GCN_multi_displacement_small: 2 decoder layers
 - no_decoder_displacement: no decoder layers
+
+<img src="./figures/displacement_method.png" alt="displacement_method.png" style="width:400px;"/>
+
+Example output of the displacement model. 
+The output of the model are the x and y coordinates fo the inner keypoints plus the 
+normal displacement of the outer keypoints to the inner keypoints. The inner keypoints
+conist of the left ventricle (red) and left atrium (green), the outer keypoints conist
+of the epicardium (blue).
 
 ### Remaining models
 
