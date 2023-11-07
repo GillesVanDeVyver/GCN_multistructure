@@ -15,7 +15,8 @@ https://github.com/gillesvntnu/GCN_UNET_agreement_demo.git
 
 The GCN and nnU-Net segmentations are shown on the left
 and right side respectively. The color-coded status bar on top
-visualizes the agreement between the models.
+visualizes the agreement between the models. The full demo video
+is availabel at t https://doi.org/10.6084/m9.figshare.24230194.
 
 ## Quickstart
 See [QUICKSTART.md/](./QUICKSTART.md) to get started with the default configuration.
