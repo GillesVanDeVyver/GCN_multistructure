@@ -2,6 +2,8 @@
 
 # Towards Robust Cardiac Segmentation using Graph Convolutional Networks
 
+This repository is the source code for the training framework of [Towards Robust Cardiac Segmentation using Graph Convolutional Networks](https://arxiv.org/abs/2310.01210).
+
 ## Code of the architecture as a modular entity
 If you want to use the architecture in your own project, you can use the architecture as a modular entity as provided in 
 https://github.com/gillesvntnu/GraphBasedSegmentation.git. The code in that repository contains the isolated code for 
