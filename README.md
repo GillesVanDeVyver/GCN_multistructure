@@ -46,7 +46,8 @@ large clinical HUNT4 dataset. Finally, we propose to use the
 inter-model agreement of the U-Net and the graph network
 as a predictor of both the input and segmentation quality.
 We show this predictor can detect out-of-distribution and
-unsuitable input images in real-time.
+unsuitable input images in real-time. For the full article,
+see [Towards Robust Cardiac Segmentation using Graph Convolutional Networks](https://arxiv.org/abs/2310.01210).
 
 ## Acknowledgements
 This work extends the framework provided by 
