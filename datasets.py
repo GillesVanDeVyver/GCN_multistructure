@@ -171,9 +171,9 @@ def load_dataset(ds_name: str, input_transform: A.core.composition.Compose = Non
         while end_offset<len(ds_name) and ds_name[end_offset] != '_':
             end_offset+=1
         split_nb = ds_name[offset:end_offset]
-        train_filenames_list = 'data/subgroups_CAMUS/subGroup'+str(split_nb)+'_training.txt'
-        val_filenames_list = 'data/subgroups_CAMUS/subGroup'+str(split_nb)+'_validation.txt'
-        test_filenames_list = 'data/subgroups_CAMUS/subGroup'+str(split_nb)+'_testing.txt'
+        train_filenames_list = 'files/subgroups_CAMUS/subGroup'+str(split_nb)+'_training.txt'
+        val_filenames_list = 'files/subgroups_CAMUS/subGroup'+str(split_nb)+'_validation.txt'
+        test_filenames_list = 'files/subgroups_CAMUS/subGroup'+str(split_nb)+'_testing.txt'
         frame_selection_mode = None
         nb_classes, closed_contour = 107, False
 
@@ -186,9 +186,9 @@ def load_dataset(ds_name: str, input_transform: A.core.composition.Compose = Non
         while end_offset<len(ds_name) and ds_name[end_offset] != '_':
             end_offset+=1
         split_nb = ds_name[offset:end_offset]
-        train_filenames_list = 'data/subgroups_CAMUS/subGroup'+str(split_nb)+'_training.txt'
-        val_filenames_list = 'data/subgroups_CAMUS/subGroup'+str(split_nb)+'_validation.txt'
-        test_filenames_list = 'data/subgroups_CAMUS/subGroup'+str(split_nb)+'_testing.txt'
+        train_filenames_list = 'files/subgroups_CAMUS/subGroup'+str(split_nb)+'_training.txt'
+        val_filenames_list = 'files/subgroups_CAMUS/subGroup'+str(split_nb)+'_validation.txt'
+        test_filenames_list = 'files/subgroups_CAMUS/subGroup'+str(split_nb)+'_testing.txt'
         frame_selection_mode = None
         nb_classes, closed_contour = 107, False
 
