@@ -27,8 +27,6 @@ def eval_trained_model(model: torch.nn.Module, cfg: CfgNode, ds: datas,
 
     # Load model:
     model = model.to(device)
-    dataset_name = cfg.EVAL.DATASET
-    model_name = cfg.MODEL.NAME
 
     # Get dataloaders
     testloader = torch.utils.data.DataLoader(ds.testset,
@@ -45,7 +43,6 @@ def eval_trained_model(model: torch.nn.Module, cfg: CfgNode, ds: datas,
                                                       model=model,
                                                       device=device,
                                                       criterion=None)
-    test_loss = test_losses["main"].avg
     dataset_info = cfg.EVAL.DATASET
     out_directory = os.path.join(basedir, "{}_eval_on_{}/".format(basename, dataset_info))
 
@@ -53,16 +50,12 @@ def eval_trained_model(model: torch.nn.Module, cfg: CfgNode, ds: datas,
         os.makedirs(out_directory)
     with open(os.path.join(out_directory,"eval_config.yaml"), "w") as f:
         f.write(cfg.dump())   # save config to file
-    # frames_info_file = pd.read_csv(ds.testset.echonet_frame_info_csvfile, index_col=0)
-    # frames_info_file = frames_info_file[frames_info_file.Split == "TEST"]
 
-    evaluator = EchonetEvaluator(dataset=ds.testset, tasks=["ef"], output_dir=out_directory)
+    # I'm resuing the EchonetEvaluator class for the CAMUS dataset. At this point the data is has the same format.
+    evaluator = EchonetEvaluator(dataset=ds.testset, tasks=[], output_dir=out_directory)
     evaluator.process(test_inputs, test_outputs)
     evaluator.evaluate()
     evaluator.plot(num_examples_to_plot=min(num_examples_to_plot, len(test_outputs)),cfg=cfg)
-
-    print(" ** test loss: {}".format(test_loss))
-    # compute_stats(total_filenames, total_output_guiding, total_gt_guiding, textfilename=textfilename)
 
 def eval_sliding_window(model:torch.nn.Module, cfg: CfgNode, ds: datas, device: torch.device, basedir: str, basename: str,):
     g = ds.testset

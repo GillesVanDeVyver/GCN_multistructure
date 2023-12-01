@@ -22,7 +22,9 @@
 1) Download the trained model from https://huggingface.co/gillesvdv/GCN_with_displacement_camus_cv1
 2) place the downloaded .pth file in ``` experiments/logs/CAMUS_displacement_cv_1/GCN_multi_displacement_small/mobilenet2/trained/ ```
 2) Run ``` python eval.py ```
-3) The results will be saved in ``` experiments/logs/CAMUS_displacement_cv_1/GCN_multi_displacement_small/mobilenet2/trained/weights_CAMUS_displacement_cv_1_GCN_multi_displacement_small_best_loss_eval_on_CAMUS_displacement_cv_1 ```
+3) The results will be saved in the folder
+``` experiments/logs/CAMUS_displacement_cv_1/GCN_multi_displacement_small/mobilenet2/trained/weights_CAMUS_displacement_cv_1_GCN_multi_displacement_small_best_loss_eval_on_CAMUS_displacement_cv_1/ ```. The ``` plots ``` subfolder contains the resulting plots and ``` predictions.pkl ``` contains the predictions of 
+each sample. 
 
 
 ## Training your own model:

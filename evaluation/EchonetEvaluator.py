@@ -128,7 +128,7 @@ class EchonetEvaluator(DatasetEvaluator):
         if self._output_dir is not None:
             if not os.path.exists(self._output_dir):
                 os.makedirs(self._output_dir)
-            file_path = os.path.join(self._output_dir, "echonet_predictions.pkl")
+            file_path = os.path.join(self._output_dir, "predictions.pkl")
             with open(file_path, 'wb') as handle:
                 pickle.dump(predictions, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
