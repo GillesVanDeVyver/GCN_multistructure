@@ -15,7 +15,7 @@
 
 ## Preprocessing CAMUS DATA
 1) Download the CAMUS dataset folder from https://humanheart-project.creatis.insa-lyon.fr/database/#collection/6373703d73e9f0047faa1bc8/folder/63fde55f73e9f004868fb7ac
-2) Place the downloaded ``` database_nifti folder ``` in ``` data/local_data ```
+3) Extract the downloaded folder and place the  ``` database_nifti ``` folder in ``` data/local_data ```
 3) Run ```PYTHONPATH=./ python tools/preprocess_CAMUS_displacement.py```
 
 ## Evaluation of trained model:

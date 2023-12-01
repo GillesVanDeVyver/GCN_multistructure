@@ -131,27 +131,21 @@ dmypy.json
 # Pycharm
 .idea
 
-/test_gpu.py
+# CAMUS data
+data/local_data/database_nifti
+data/local_data/database_nifti.zip
+data/local_data/CAMUS_keypoint_annotations_displacement
+data/local_data/keypoint_extraction_displacement_log
 
-test_cuda.py
-/debug.py
-
-files/config_CAMUS_cv/
-/extra_plotting/
-
-
-data/local_data/
-data/subgroups_CAMUS/
 docs/
 
 
-files/configs/Debug.txt
-
-tools/files/filenames/
 files/filenames/
-
 files/FileList.csv
-
 files/echonet_cycle_test_filenames.txt
 files/echonet_cycle_train_filenames.txt
 files/echonet_cycle_val_filenames.txt
+
+# default model trained on CAMUS cv 1
+experiments/logs/CAMUS_displacement_cv_1/GCN_multi_displacement_small/mobilenet2/trained/weights_CAMUS_displacement_cv_1_GCN_multi_displacement_small_best_loss.pth
+experiments/logs/CAMUS_displacement_cv_1/GCN_multi_displacement_small/mobilenet2/trained/weights_CAMUS_displacement_cv_1_GCN_multi_displacement_small_best_loss_eval_on_CAMUS_displacement_cv_1/
