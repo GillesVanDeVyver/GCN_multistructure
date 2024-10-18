@@ -133,7 +133,7 @@ dmypy.json
 
 # CAMUS data
 data/local_data/database_nifti
-data/local_data/database_nifti.zip
+data/local_data/database_nifti_old.zip
 data/local_data/CAMUS_keypoint_annotations_displacement
 data/local_data/keypoint_extraction_displacement_log
 

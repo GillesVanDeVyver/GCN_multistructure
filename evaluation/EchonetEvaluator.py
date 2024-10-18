@@ -15,9 +15,11 @@ import pickle
 from datasets import datas
 from utils.utils_tools import distances_to_kpts
 from .BaseEvaluator import DatasetEvaluator
-from utils.utils_plot import plot_grid, draw_kpts, plot_kpts_pred_and_gt
+from utils.utils_plot import plot_grid, draw_kpts, plot_kpts_pred_and_gt, create_visualization
 from utils.utils_stat import match_two_kpts_set
 from tqdm import tqdm
+from utils.utils_eval import keypoints_to_segmentation,  distances_to_kpts_lv, merge_masks
+
 class EchonetEvaluator(DatasetEvaluator):
     """
     Evaluate EchoNet segmentation predictions for a single iteration of the cardiac navigation model
@@ -167,6 +169,7 @@ class EchonetEvaluator(DatasetEvaluator):
         for data_path in tqdm(random.sample(list(self._predictions), num_examples_to_plot)):
             prediction = self._predictions[data_path]
             fig.clf()
+            graph_seg_sample = None
             if "ef" in self._tasks:
                 keypoints_prediction = prediction["keypoints_prediction"] if "kpts" in self._tasks else None
                 sd_prediction = prediction["sd_prediction"] if "sd" in self._tasks else None
@@ -176,18 +179,45 @@ class EchonetEvaluator(DatasetEvaluator):
                                          keypoints_prediction=keypoints_prediction,
                                          sd_prediction=sd_prediction)
             else:
+                kpts_pred=prediction["keypoints_prediction"]
+                kpts_lv = kpts_pred[:43, :]
+                kpts_la = np.concatenate((np.array(kpts_pred[42:64, :]),
+                                          np.expand_dims(np.array(kpts_pred[0, :]), 0)),
+                                         0) # also includes the first annulus points (0 and 42)
                 if 'distances' in self._tasks:
+                    displacements = prediction["distances_pred"]
+
                     fig = self._plot_kpts_single_frame_displacement(fig,
                                                                  data_path_from_root=prediction["data_path_from_root"],
                                                                  keypoints_prediction=prediction[
                                                                      "keypoints_prediction"], cfg=cfg,
                                                                  distances_prediction=prediction['distances_pred'])
+                    kpts_ep = distances_to_kpts_lv(kpts_lv, displacements, as_np_array=True,
+                                                                  transpose=False)
                 else:
                     fig = self._plot_kpts_single_frame(fig, data_path_from_root=prediction["data_path_from_root"],
                                                        keypoints_prediction=prediction["keypoints_prediction"],
                                                        cfg=cfg)
+                    kpts_ep = kpts_pred[64:, :]
+
+                if cfg.EVAL.PLOT_PIXELWISE_SEG:
+                    # also plot pixelwise segmentation
+                    mask_lv, mask_la, mask_ep = keypoints_to_segmentation(256, kpts_lv, kpts_la, kpts_ep)
+                    graph_seg_sample = merge_masks(mask_lv, mask_la, mask_ep)
+
             plot_filename = "{}.jpg".format(os.path.splitext(prediction["data_path_from_root"])[0].replace("/", "_"))
             fig.savefig(fname=os.path.join(plot_directory, plot_filename))
+
+
+            if graph_seg_sample is not None:
+                # plot pixelwise segmentation
+                fig = plt.figure(constrained_layout=True, figsize=(16, 16))
+                fig = self._plot_pixelwise_segmentation(fig,
+                                                        graph_seg_sample,
+                                                        data_path_from_root=prediction["data_path_from_root"])
+                plot_filename = "{}_pixelwise_seg.jpg".format(os.path.splitext(prediction["data_path_from_root"])[0].replace("/", "_"))
+                fig.savefig(fname=os.path.join(plot_directory, plot_filename))
+
 
     def set_tasks(self, tasks: List) -> None:
         self._tasks = tasks
@@ -349,6 +379,18 @@ class EchonetEvaluator(DatasetEvaluator):
                               sort_ep=True)
         return fig
 
+    def _plot_pixelwise_segmentation(self, fig,graph_seg_sample, data_path_from_root):
+        ax = fig.add_subplot(1, 1, 1)
+        datapoint_index = self._dataset.img_list.index(data_path_from_root)
+        data = self._dataset.get_img_and_kpts(datapoint_index)
+        img = data["img"]
+        img = cv2.resize(img, dsize=(256, 256), interpolation=cv2.INTER_AREA)
+        visualization = create_visualization(img/255, graph_seg_sample)
+        ax.imshow(visualization)
+        ax.set_title("Pixelwise segmentation for {}".format(data_path_from_root))
+        ax.axis('off')
+        return fig
+
     def _plot_navigation_histograms(self, towards_target: np.ndarray) -> plt.Figure:
         fig, axs = plt.subplots(2, 3, figsize=(18, 10))
         metrics = ['x[mm]', 'y[mm]', 'z[mm]', 'roll[\u00b0]', 'pitch[\u00b0]', 'yaw[\u00b0]']
@@ -378,3 +420,5 @@ class EchonetEvaluator(DatasetEvaluator):
                 axs[rr, cc].plot([0, 1], [0, 1], color='red', ls="--", transform=axs[rr, cc].transAxes)
 
         return fig
+
+

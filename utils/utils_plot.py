@@ -378,7 +378,7 @@ def create_visualization(ultrasound, segmentation):
             result[:, :, i] = ultrasound
 
     if len(segmentation.shape) == 3:
-        # One hot encoded tensor
+        # One hot encoded segmentation
         for i in range(3):
             result[segmentation[:, :, i+1] > 0.5, i] = np.clip(0.25 + result[segmentation[:, :, i+1] > 0.5, i], 0.0, 1.0)
     else:

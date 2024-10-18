@@ -17,8 +17,6 @@ EVAL:
   MODE: normal
   NUM_WORKERS: 8
   OUT_DIR: null
-  OUT_DIR_UNET: null
-  SEG_DIR: seg_dir_to_be_specified
   WEIGHTS: experiments/logs/CAMUS_displacement_cv_1/GCN_multi_displacement_small/mobilenet2/721154036/weights_CAMUS_displacement_cv_1_GCN_multi_displacement_small_best_kptsErr.pth
 INF:
   INPUT: ''

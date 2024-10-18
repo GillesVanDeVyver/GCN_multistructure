@@ -51,7 +51,6 @@ def eval_trained_model(model: torch.nn.Module, cfg: CfgNode, ds: datas,
     with open(os.path.join(out_directory,"eval_config.yaml"), "w") as f:
         f.write(cfg.dump())   # save config to file
 
-    # I'm resuing the EchonetEvaluator class for the CAMUS dataset. At this point the data is has the same format.
     evaluator = EchonetEvaluator(dataset=ds.testset, tasks=[], output_dir=out_directory)
     evaluator.process(test_inputs, test_outputs)
     evaluator.evaluate()
@@ -148,6 +147,16 @@ if __name__ == '__main__':
     except:
         num_kpts= [cfg_eval.TRAIN.NUM_KPTS]
     model, cfg_model, _ = load_trained_model(weights_filename=cfg_eval.EVAL.WEIGHTS)
+
+    # PLOT_PIXELWISE_SEG is a later addition to the config, so it will not exist for configs of earlier versions
+    try:
+        _ = cfg_model.EVAL.PLOT_PIXELWISE_SEG
+    except:
+        # temporarily unfreeze cfg_eval and add to the config PLOT_PIXEL_WISE
+        cfg_model.defrost()
+        cfg_model.EVAL.PLOT_PIXELWISE_SEG = True
+        cfg_model.freeze()
+
 
     cfg = overwrite_eval_cfg(cfg_model,cfg_eval)
 

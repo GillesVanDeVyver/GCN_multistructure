@@ -136,11 +136,10 @@ _C.EVAL.MODE ='normal'
 
 _C.EVAL.DATASET = "CAMUS_displacement_cv_1"
 
-_C.EVAL.SEG_DIR = 'seg_dir_to_be_specified'
-
 _C.EVAL.OUT_DIR = None
 
-_C.EVAL.OUT_DIR_UNET = None
+_C.EVAL.PLOT_PIXELWISE_SEG = True
+
 
 
 
