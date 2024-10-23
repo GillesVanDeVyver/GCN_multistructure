@@ -102,8 +102,14 @@ See [INSTALL.md/](./INSTALL.md) for environment setup.
 See [GETTING_STARTED.md](./GETTING_STARTED.md) to get started with training and testing the GCN model. 
 
 ## Contact
-For questions, please contact:
-[gilles.van.de.vyver@ntnu.no](mailto:gilles.van.de.vyver@ntnu.no)
+
+Developer: <br />
+gillesvandevyver@hotmail.be <br />
+https://www.linkedin.com/in/gilles-van-de-vyver/
+
+Management: <br />
+lasse.lovstakken@ntnu.no <br />
+erik.smistad@ntnu.no <br />
 
 
 
