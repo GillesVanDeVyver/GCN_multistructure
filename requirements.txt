@@ -77,3 +77,5 @@ urllib3==1.26.16
 Werkzeug==2.3.7
 wrapt==1.15.0
 yacs==0.1.8
+SimpleITK==2.4
+medpy==0.5.2
