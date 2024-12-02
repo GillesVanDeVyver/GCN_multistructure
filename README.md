@@ -1,8 +1,8 @@
 
 
-# Towards Robust Cardiac Segmentation using Graph Convolutional Networks
+# Towards Robust Cardiac Segmentation Using Graph Convolutional Networks
 
-This repository is the source code for the training framework of [Towards Robust Cardiac Segmentation using Graph Convolutional Networks](https://arxiv.org/abs/2310.01210).
+This repository is the source code for the training framework of [Toward Robust Cardiac Segmentation Using Graph Convolutional Networks](https://ieeexplore.ieee.org/document/10458930).
 
 ## Quickstart
 See [QUICKSTART.md/](./QUICKSTART.md) to get started with the default configuration.
