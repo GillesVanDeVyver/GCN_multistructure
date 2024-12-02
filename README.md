@@ -4,22 +4,6 @@
 
 This repository is the source code for the training framework of [Towards Robust Cardiac Segmentation using Graph Convolutional Networks](https://arxiv.org/abs/2310.01210).
 
-## Code of the architecture as a modular entity
-If you want to use the architecture in your own project, you can use the architecture as a modular entity as provided in 
-https://github.com/gillesvntnu/GraphBasedSegmentation.git. The code in that repository contains the isolated code for 
-the arhictecture only, so you can insert it in any PyTorch framework.
-
-## Real-time demo
-For code of the real-time, c++ demo of inter model agreement, see 
-https://github.com/gillesvntnu/GCN_UNET_agreement_demo.git
-
-![](./figures/real_time_demo.gif)
-
-The GCN and nnU-Net segmentations are shown on the left
-and right side respectively. The color-coded status bar on top
-visualizes the agreement between the models. The full demo video
-is availabel at https://doi.org/10.6084/m9.figshare.24230194.
-
 ## Quickstart
 See [QUICKSTART.md/](./QUICKSTART.md) to get started with the default configuration.
 
@@ -100,6 +84,23 @@ See [INSTALL.md/](./INSTALL.md) for environment setup.
 
 ## Getting stated
 See [GETTING_STARTED.md](./GETTING_STARTED.md) to get started with training and testing the GCN model. 
+
+
+## Code of the architecture as a modular entity
+If you want to use the architecture in your own project, you can use the architecture as a modular entity as provided in 
+https://github.com/gillesvntnu/GraphBasedSegmentation.git. The code in that repository contains the isolated code for 
+the arhictecture only, so you can insert it in any PyTorch framework.
+
+## Real-time demo
+For code of the real-time, c++ demo of inter model agreement, see 
+https://github.com/gillesvntnu/GCN_UNET_agreement_demo.git
+
+![](./figures/real_time_demo.gif)
+
+The GCN and nnU-Net segmentations are shown on the left
+and right side respectively. The color-coded status bar on top
+visualizes the agreement between the models. The full demo video
+is availabel at https://doi.org/10.6084/m9.figshare.24230194.
 
 ## Contact
 
