@@ -26,6 +26,9 @@
 ``` experiments/logs/CAMUS_displacement_cv_1/GCN_multi_displacement_small/mobilenet2/trained/weights_CAMUS_displacement_cv_1_GCN_multi_displacement_small_best_loss_eval_on_CAMUS_displacement_cv_1/ ```. The ``` plots ``` subfolder contains the resulting plots and ``` predictions.pkl ``` contains the predictions of 
 each sample. 
 
+## Calculating metrics"
+See ``` eval/calculate_metrics ``` for an example of how to calculate metrics (Dice and Hausdorff) from the predictions.
+
 
 ## Training your own model:
 1) Run ``` python train.py ``` (this will take a long time as the default trains for 5000 epochs)

@@ -90,7 +90,9 @@ def evaluate_predictions(predictions_file_path,camus_path, displacement_model=Tr
 
 if __name__ == '__main__':
     # change these to paths on your system
+    # predictins_path is the path to the 'predictions.pkl' file generated when running eval.py
     predictions_path = '../experiments/logs/CAMUS_displacement_cv_1/GCN_multi_displacement_small/mobilenet2/trained/weights_CAMUS_displacement_cv_1_GCN_multi_displacement_small_best_loss_eval_on_CAMUS_displacement_cv_1/predictions.pkl'
+    # camus_path is the path to the CAMUS dataset as downloaded from https://www.creatis.insa-lyon.fr/Challenge/camus/
     camus_path = '../data/local_data/database_nifti'
 
     evaluate_predictions(predictions_path,camus_path)

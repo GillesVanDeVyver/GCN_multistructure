@@ -166,3 +166,6 @@ If you want to specify your own configuration, you can run:
 
 The configuration mechanism is the same as for the training script. 
 You can specify your own configuration file or use the default configuration file.
+
+## Calculating metrics"
+See ``` eval/calculate_metrics ``` for an example of how to calculate metrics (Dice and Hausdorff) from the predictions.
