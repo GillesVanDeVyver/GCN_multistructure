@@ -2,36 +2,23 @@
 
 # Towards Robust Cardiac Segmentation Using Graph Convolutional Networks
 
-This repository is the source code for the training framework of [Toward Robust Cardiac Segmentation Using Graph Convolutional Networks](https://ieeexplore.ieee.org/document/10458930).
+![](./figures/real_time_demo.gif)
+
+The GCN and nnU-Net segmentations are shown on the left
+and right side respectively. The color-coded status bar on top
+visualizes the agreement between the models. The full demo video
+is available at https://doi.org/10.6084/m9.figshare.24230194.
+
+## Publication & Citation
+You should cite the following paper when using the code in this repository:
+Van De Vyver, Gilles, et al. "Towards Robust Cardiac Segmentation using Graph Convolutional Networks." IEEE Access (2024). https://ieeexplore.ieee.org/document/10458930
+
+Blog post: [https://gillesvandevyver.com/#/projects/finding-hearts](https://gillesvandevyver.com/#/projects/finding-hearts)
+
 
 ## Quickstart
 See [QUICKSTART.md/](./QUICKSTART.md) to get started with the default configuration.
 
-
-## Introduction
-Fully automatic cardiac segmentation can be
-a fast and reproducible method to extract clinical measure-
-ments from an echocardiography examination. The U-Net
-architecture is the current state-of-the-art deep learning
-architecture for medical segmentation and can segment
-cardiac structures in real-time with average errors below
-inter-observer variability. However, this architecture still
-generates large outliers that are often anatomically incor-
-rect. This work expands the concept of graph convolutional
-neural networks that predict the contour points of the struc-
-tures of interest instead of labelling each pixel. We pro-
-pose a graph architecture that uses two convolutional rings
-based on cardiac anatomy and show that this eliminates
-anatomical incorrect segmentations on the publicly avail-
-able CAMUS dataset. Additionally, this work contributes
-with an ablation study on the graph convolutional archi-
-tecture and an evaluation of clinical measurements on the
-large clinical HUNT4 dataset. Finally, we propose to use the
-inter-model agreement of the U-Net and the graph network
-as a predictor of both the input and segmentation quality.
-We show this predictor can detect out-of-distribution and
-unsuitable input images in real-time. For the full article,
-see [Toward Robust Cardiac Segmentation Using Graph Convolutional Networks](https://ieeexplore.ieee.org/document/10458930).
 
 ## Acknowledgements
 This work extends the framework provided by 
@@ -70,6 +57,7 @@ The architecture of the GCN. The CNN encoder transforms the input ultrasound ima
 H to an embedded vector of size X. A dense layer transforms this embedding to an embedding in keypoint space, with 107
 keypoints and C1 channels. The decoder consists of a sequence of graph convolutions over these keypoint embeddings. The
 final outputs are the 2D coordinates of the keypoints in the image.
+
 ## Results
 
 ![plot](./figures/case_analysis.png)
@@ -95,12 +83,7 @@ the arhictecture only, so you can insert it in any PyTorch framework.
 For code of the real-time, c++ demo of inter model agreement, see 
 https://github.com/gillesvntnu/GCN_UNET_agreement_demo.git
 
-![](./figures/real_time_demo.gif)
 
-The GCN and nnU-Net segmentations are shown on the left
-and right side respectively. The color-coded status bar on top
-visualizes the agreement between the models. The full demo video
-is availabel at https://doi.org/10.6084/m9.figshare.24230194.
 
 ## Contact
 
