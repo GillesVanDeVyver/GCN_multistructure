@@ -1,6 +1,6 @@
 
 
-# Towards Robust Cardiac Segmentation Using Graph Convolutional Networks
+# Towards Robust Cardiac Segmentation Using Graph Convolutional Networks (GCNs)
 
 ![](./figures/real_time_demo.gif)
 
